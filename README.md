@@ -17,6 +17,7 @@ Cookie-Editor is available on Firefox for Android and Safari for iOS, with an in
 Find this extension on the [Chrome Web Store](https://chrome.google.com/webstore/detail/cookie-editor/hlkenndednhfkekhgcdicdfddnkalmdm?utm_campaign=github).  
 [![Chrome Web Store](readme/get-chrome.png)](https://chrome.google.com/webstore/detail/cookie-editor/hlkenndednhfkekhgcdicdfddnkalmdm?utm_campaign=github)
 
+
 ### Install on Firefox
 Find this extension on the [Firefox Add-ons site](https://addons.mozilla.org/addon/cookie-editor?utm_campaign=external-github-readme).  
 [![Firefox Add-ons](readme/get-firefox.webp)](https://addons.mozilla.org/addon/cookie-editor?utm_campaign=external-github-readme)
