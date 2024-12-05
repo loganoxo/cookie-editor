@@ -1302,16 +1302,15 @@ import { CookieHandlerPopup } from './cookieHandlerPopup.js';
   /**
    * Removes the currently displayed ad from the interface.
    */
-  function clearAd() {
+  // function clearAd() {
     // clearChildren(document.getElementById('ad-container'));
-  }
+  // }
 
   /**
    * Creates the HTML to display an ad and assigns the event handlers.
-   * @param {object} adObject Ad to display.
-   * @return {string} The HTML representation of the ad.
+   *
    */
-  function displayAd(adObject) {
+  // function displayAd(adObject) {
     // const template = document.importNode(
     //   document.getElementById('tmp-ad-item').content,
     //   true,
@@ -1330,7 +1329,7 @@ import { CookieHandlerPopup } from './cookieHandlerPopup.js';
     // });
     //
     // return template;
-  }
+  // }
 
   /**
    * Handles the changes required to the interface when the options are changed
