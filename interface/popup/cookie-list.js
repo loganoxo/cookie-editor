@@ -1,5 +1,5 @@
 import { CookieHandlerDevtools } from '../devtools/cookieHandlerDevtools.js';
-import { AdHandler } from '../lib/ads/adHandler.js';
+// import { AdHandler } from '../lib/ads/adHandler.js';
 import { Animate } from '../lib/animate.js';
 import { BrowserDetector } from '../lib/browserDetector.js';
 import { Cookie } from '../lib/cookie.js';
@@ -31,11 +31,11 @@ import { CookieHandlerPopup } from './cookieHandlerPopup.js';
   const storageHandler = new GenericStorageHandler(browserDetector);
   const optionHandler = new OptionsHandler(browserDetector, storageHandler);
   const themeHandler = new ThemeHandler(optionHandler);
-  const adHandler = new AdHandler(
-    browserDetector,
-    storageHandler,
-    optionHandler,
-  );
+  // const adHandler = new AdHandler(
+  //   browserDetector,
+  //   storageHandler,
+  //   optionHandler,
+  // );
   const cookieHandler = window.isDevtools
     ? new CookieHandlerDevtools(browserDetector)
     : new CookieHandlerPopup(browserDetector);
@@ -1285,24 +1285,25 @@ import { CookieHandlerPopup } from './cookieHandlerPopup.js';
    * are more than one valid option.
    */
   async function handleAd() {
-    const canShow = await adHandler.canShowAnyAd();
-    if (!canShow) {
-      return;
-    }
-    const selectedAd = await adHandler.getRandomValidAd();
-    if (selectedAd === false) {
-      console.log('No valid ads to display');
-      return;
-    }
-    clearAd();
-    const adItemHtml = displayAd(selectedAd);
-    document.getElementById('ad-container').appendChild(adItemHtml);
+    // const canShow = await adHandler.canShowAnyAd();
+    // if (!canShow) {
+    //   return;
+    // }
+    // return;
+    // const selectedAd = await adHandler.getRandomValidAd();
+    // if (selectedAd === false) {
+    //   console.log('No valid ads to display');
+    //   return;
+    // }
+    // clearAd();
+    // const adItemHtml = displayAd(selectedAd);
+    // document.getElementById('ad-container').appendChild(adItemHtml);
   }
   /**
    * Removes the currently displayed ad from the interface.
    */
   function clearAd() {
-    clearChildren(document.getElementById('ad-container'));
+    // clearChildren(document.getElementById('ad-container'));
   }
 
   /**
@@ -1311,24 +1312,24 @@ import { CookieHandlerPopup } from './cookieHandlerPopup.js';
    * @return {string} The HTML representation of the ad.
    */
   function displayAd(adObject) {
-    const template = document.importNode(
-      document.getElementById('tmp-ad-item').content,
-      true,
-    );
-    const link = template.querySelector('.ad-link a');
-    link.textContent = adObject.text;
-    link.title = adObject.tooltip;
-    link.href = adObject.url;
-
-    template.querySelector('.dont-show').addEventListener('click', (e) => {
-      clearAd();
-      adHandler.markAdAsDismissed(adObject);
-    });
-    template.querySelector('.later').addEventListener('click', (e) => {
-      clearAd();
-    });
-
-    return template;
+    // const template = document.importNode(
+    //   document.getElementById('tmp-ad-item').content,
+    //   true,
+    // );
+    // const link = template.querySelector('.ad-link a');
+    // link.textContent = adObject.text;
+    // link.title = adObject.tooltip;
+    // link.href = adObject.url;
+    //
+    // template.querySelector('.dont-show').addEventListener('click', (e) => {
+    //   clearAd();
+    //   adHandler.markAdAsDismissed(adObject);
+    // });
+    // template.querySelector('.later').addEventListener('click', (e) => {
+    //   clearAd();
+    // });
+    //
+    // return template;
   }
 
   /**
