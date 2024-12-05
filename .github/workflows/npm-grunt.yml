@@ -51,6 +51,9 @@ jobs:
             -   name: Verify Build Output
                 run: ls -l dist
 
+            -   name: 压缩 dist 目录
+                run: zip -r dist.zip dist
+
             # Step 7: Create GitHub Release
             -   name: Create GitHub Release
                 id: create_release
@@ -72,6 +75,6 @@ jobs:
                     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
                 with:
                     upload_url: ${{ steps.create_release.outputs.upload_url }}
-                    asset_path: ./dist
+                    asset_path: ./dist.zip
                     asset_name: dist.zip
                     asset_content_type: application/zip
